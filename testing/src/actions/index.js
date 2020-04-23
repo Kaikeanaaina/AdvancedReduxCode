@@ -4,6 +4,7 @@ import { SAVE_COMMENT, FETCH_COMMENTS, CHANGE_AUTH } from 'actions/types';
 export function saveComment(comment) {
   return {
     type: SAVE_COMMENT,
+    //payload is like passing value(s) to the reducer
     payload: comment
   };
 }

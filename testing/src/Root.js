@@ -1,3 +1,5 @@
+//this is so that we can test the higher components for the redux/redux store
+//therefore this file is only for testing
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';

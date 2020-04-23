@@ -34,5 +34,5 @@ class CommentBox extends Component {
     );
   }
 }
-
+//our comment box doesn't need access to any state, so we put null
 export default connect(null, actions)(requireAuth(CommentBox));
