@@ -1,3 +1,5 @@
+//jsonschema.net
+
 export default {
   $id: 'http://example.com/example.json',
   type: 'object',

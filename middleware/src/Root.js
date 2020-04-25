@@ -1,14 +1,20 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import reducers from 'reducers';
+
+
 import async from 'middlewares/async';
 import stateValidator from 'middlewares/stateValidator';
-import reducers from 'reducers';
+
 
 export default ({ children, initialState = {} }) => {
   const store = createStore(
     reducers,
     initialState,
+    // the async middleware was created keeping in mind
+    // that it wouldn't matter where in the chain/order
+    // of middleware that it needs to go
     applyMiddleware(async, stateValidator)
   );
 

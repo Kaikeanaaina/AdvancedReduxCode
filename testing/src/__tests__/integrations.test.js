@@ -25,6 +25,10 @@ it('can fetch a list of comments and display them', done => {
 
   wrapped.find('.fetch-comments').simulate('click');
 
+  // we need to put wait
+  // the processing speed is to fast after clicking
+  // where it can't render the li's to be true
+  // so we have them wait
   moxios.wait(() => {
     wrapped.update();
 

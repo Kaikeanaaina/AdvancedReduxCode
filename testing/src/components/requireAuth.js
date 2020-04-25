@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+//a function invoked
+//with a class in it
+//
+
+//this file is to handle if someone isLoggedIn
+//if not, they are pushed to the /
 export default ChildComponent => {
   class ComposedComponent extends Component {
     // Our component just got rendered
