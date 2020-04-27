@@ -2,7 +2,9 @@
 const express = require('express');
 const http = require('http');
 const bodyParser = require('body-parser');
+    //parse incoming request - specifically into json, attempt to do no matter what type the file is - any request will parse as if it was json
 const morgan = require('morgan');
+    //morgan is a HTTP request logger "middleware" for node.js    . it's a middleware - logging framework, using it for debugging
 const app = express();
 const router = require('./router');
 const mongoose = require('mongoose');
