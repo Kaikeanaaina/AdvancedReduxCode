@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt-nodejs');
 // Define our model
 const userSchema = new Schema({
   email: { type: String, unique: true, lowercase: true },
+                                          // it will set the string to lowercase before saving it to the database. so that we can check unique
   password: String
 });
 

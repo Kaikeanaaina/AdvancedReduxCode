@@ -1,3 +1,9 @@
+  //this is where we put the logic to process a request
+  // this is where we are going to pull in a req object or res object
+  // going to put some logic and then respond to it
+  // to do this
+  // we are going to define a function and then export it
+
 const jwt = require('jwt-simple');
 const User = require('../models/user');
 const config = require('../config');

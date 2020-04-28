@@ -12,3 +12,6 @@ module.exports = function(app) {
   app.post('/signin', requireSignin, Authentication.signin);
   app.post('/signup', Authentication.signup);
 }
+
+//app.get('/', function(req, res, next){})
+  //the "next" is mainly used for error handling
