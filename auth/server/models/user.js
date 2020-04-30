@@ -16,6 +16,7 @@ userSchema.pre('save', function(next) {
   const user = this;
 
   // generate a salt then run callback
+  // salt is - encrypted string
   bcrypt.genSalt(10, function(err, salt) {
     if (err) { return next(err); }
 

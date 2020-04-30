@@ -10,6 +10,11 @@ const config = require('../config');
 
 function tokenForUser(user) {
   const timestamp = new Date().getTime();
+  //the first argument is information is what we want to encode
+  // the second argument is the secret we are going to use to encrypt
+  // we want to use id because it doesn't change as often as user.emails and etc
+  // jwt is a convention, sub is subject, meaning who is this token about or who does it belong to
+  // iat, is issued at time - 
   return jwt.encode({ sub: user.id, iat: timestamp }, config.secret);
 }
 
