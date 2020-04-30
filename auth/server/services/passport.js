@@ -32,6 +32,8 @@ const jwtOptions = {
 };
 
 // Create JWT strategy
+//the second argument is a function that will be called everytime 
+//someone tries to log in with a jwt, when we try to authenticate
 const jwtLogin = new JwtStrategy(jwtOptions, function(payload, done) {
   // See if the user ID in the payload exists in our database
   // If it does, call 'done' with that other
